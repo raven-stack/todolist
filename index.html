@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./main.css">
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+
+<body>
+
+
+  <div class="banner">
+    <button class="banner__btn" id="BannerBtn">
+      <span class="btn__bar"></span>
+      <span class="btn__bar"></span>
+      <span class="btn__bar"></span>
+    </button>
+  </div>
+
+  <main class="todo">
+
+    <div class="todo__top">
+      <h1 class="top__title" id="TodoTitle"></h1>
+      <button class="top__button" id="ThemeToggle">
+        <img id="ThemeIcon" src="./images/icon-sun.svg" alt="Theme mode toggler">
+      </button>
+    </div>
+
+    <div class="todo__add">
+      <span class="add__circle"></span>
+      <input id="AddTodo" class="add__field" type="text" placeholder="Create a new todo...">
+    </div>
+
+    <div class="todo__list">
+      <ul class="list" id="TodoList">
+        <!-- tu będą li z javascriptu -->
+      </ul>
+
+      <div class="filters">
+        <p class="filters__left" id="TodoCount"></p>
+
+        <div class="filters__options">
+
+          <div class="option">
+            <input type="radio" name="todo" id="TodoAll">
+            <label for="TodoAll">All</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" name="todo" id="TodoActive">
+            <label for="TodoActive">Active</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" name="todo" id="TodoCompleted">
+            <label for="TodoCompleted">Completed</label>
+          </div>
+
+        </div>
+        <button id="TodoClear" class="filters__btn">Clear Completed</button>
+      </div>
+    </div>
+  </main>
+
+
+  <div class="offcanvas" id="OffcanvasMenu">
+    <button id="OffcanvasClose" class="offcanvas__close" aria-label="Zamknij menu boczne">
+      <img src="./images/icon-cross.svg">
+    </button>
+
+    <div class="offcanvas__date">
+      <h3 class="date__info"></h3>
+      <p class="date__weekday"></p>
+    </div>
+
+    <div class="offcanvas__clock">
+      <h3 class="clock">13:09:22</h3>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
